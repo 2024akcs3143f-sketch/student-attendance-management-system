@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Attendance Management System</h1>
+        <p>Record and manage student attendance</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Record Attendance</h2>
+
+            <form id="attendanceForm">
+                <label for="studentId">Student ID</label>
+                <input id="studentId" type="text" required
+                       placeholder="e.g. 2026/CS/001">
+
+                <label for="studentName">Student Name</label>
+                <input id="studentName" type="text" required
+                       placeholder="Enter student's name">
+
+                <label for="attendanceDate">Date</label>
+                <input id="attendanceDate" type="date" required>
+
+                <label for="status">Attendance Status</label>
+                <select id="status" required>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                    <option value="Late">Late</option>
+                </select>
+
+                <button type="submit">Save Attendance</button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="card">
+            <h2>Attendance Records</h2>
+            <button id="loadRecords" type="button">
+                Load Records
+            </button>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody">
+                        <tr>
+                            <td colspan="4">Click Load Records to retrieve data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student A — Frontend Component</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
